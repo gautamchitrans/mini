@@ -15,7 +15,7 @@ final TextEditingController _message=TextEditingController();
 
      if (_message.text.isNotEmpty) {
        Map<String, dynamic> messages = {
-         "sendby": _auth.currentUser!.uid.toString(),
+         "sendby": _auth.currentUser!.email!,
          "message": _message.text,
          "type": "text",
          "time": FieldValue.serverTimestamp(),
